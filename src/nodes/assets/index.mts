@@ -3,7 +3,7 @@ import {
   RESONITE_FLOW_TYPES,
   RESONITE_TYPE,
   ResoniteNode,
-} from "../../type";
+} from "../../type.mjs";
 
 const BakeMeshes: ResoniteNode = {
   label: "BakeMeshes",

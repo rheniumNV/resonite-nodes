@@ -3,9 +3,9 @@ import {
   RESONITE_FLOW_TYPES,
   RESONITE_TYPE,
   ResoniteNode,
-} from "../../type";
-import { Anchors } from "./anchors";
-import { BodyNodes } from "./bodyNodes";
+} from "../../type.mjs";
+import { Anchors } from "./anchors/index.mjs";
+import { BodyNodes } from "./bodyNodes/index.mjs";
 
 const DefaultUserRootScale: ResoniteNode = {
   label: "DefaultUserRootScale",

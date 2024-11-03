@@ -1,20 +1,38 @@
 {
   "name": "resonite-nodes",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "ts-node src/server.ts"
-  },
+  "description": "",
   "author": "rhenium",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@types/express": "^5.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+  "scripts": {
+    "start": "node dist/server.mjs",
+    "dev": "tsc-watch --onSuccess \"node dist/server.js\"",
+    "clean": "node -e \"try { require('fs').rmdirSync('dist', { recursive: true }) } catch (e) {}\"",
+    "build": "tsc",
+    "lint": "eslint ./src/**/*.mts --flag unstable_ts_config",
+    "format": "prettier --write ./src/**/*.mts",
+    "prepare": "husky"
   },
   "dependencies": {
     "express": "^4.21.1",
     "json2emap": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "eslint": "^9.13.0",
+    "husky": "^9.1.6",
+    "jiti": "^2.4.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.2"
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

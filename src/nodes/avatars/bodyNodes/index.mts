@@ -2,7 +2,7 @@ import {
   packResoniteNodeCategory,
   RESONITE_TYPE,
   ResoniteNode,
-} from "../../../type";
+} from "../../../type.mjs";
 
 const BodyNodeChirality: ResoniteNode = {
   label: "Chirality",
@@ -13,8 +13,8 @@ const BodyNodeChirality: ResoniteNode = {
 };
 
 const BodyNodeSlot: ResoniteNode = {
-  label: "Slot",
-  type: "[ProtoFluxBindings]FrooxEngine.ProtoFlux.Runtimes.Execution.Nodes.FrooxEngine.Avatar.BodyNodes.BodyNodeSlot",
+  label: "BodyNodeSlot",
+  type: "[ProtoFluxBindings]FrooxEngine.ProtoFlux.Runtimes.Execution.Nodes.FrooxEngine.Avatar.BodyNodeSlot",
   isGeneric: false,
   inputs: [RESONITE_TYPE.Slot, RESONITE_TYPE.BodyNode],
   outputs: [RESONITE_TYPE.Slot],
@@ -22,7 +22,7 @@ const BodyNodeSlot: ResoniteNode = {
 
 const BodyNodeSlotInChildren: ResoniteNode = {
   label: "SlotInChildren",
-  type: "[ProtoFluxBindings]FrooxEngine.ProtoFlux.Runtimes.Execution.Nodes.FrooxEngine.Avatar.BodyNodes.BodyNodeSlotInChildren",
+  type: "[ProtoFluxBindings]FrooxEngine.ProtoFlux.Runtimes.Execution.Nodes.FrooxEngine.Avatar.BodyNodeSlotInChildren",
   isGeneric: false,
   inputs: [RESONITE_TYPE.Slot, RESONITE_TYPE.BodyNode],
   outputs: [RESONITE_TYPE.Slot],
@@ -77,7 +77,7 @@ const IsEye: ResoniteNode = {
   type: "[ProtoFluxBindings]FrooxEngine.ProtoFlux.Runtimes.Execution.Nodes.FrooxEngine.Avatar.BodyNodes.IsEye",
   isGeneric: false,
   inputs: [RESONITE_TYPE.BodyNode],
-  outputs: [RESONITE_TYPE.Boolean],
+  outputs: [RESONITE_TYPE.Bool],
 };
 
 const OtherSide: ResoniteNode = {

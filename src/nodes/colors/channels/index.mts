@@ -2,7 +2,7 @@ import {
   packResoniteNodeCategory,
   RESONITE_TYPE,
   ResoniteNode,
-} from "../../../type";
+} from "../../../type.mjs";
 
 const ColorAddAlpha: ResoniteNode = {
   label: "ColorAddAlpha",

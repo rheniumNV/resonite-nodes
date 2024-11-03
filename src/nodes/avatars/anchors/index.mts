@@ -3,7 +3,7 @@ import {
   RESONITE_FLOW_TYPES,
   RESONITE_TYPE,
   ResoniteNode,
-} from "../../../type";
+} from "../../../type.mjs";
 
 const AnchoredUser: ResoniteNode = {
   label: "AnchoredUser",
@@ -46,7 +46,7 @@ const IsAnchorOccupied: ResoniteNode = {
   type: "[ProtoFluxBindings]FrooxEngine.ProtoFlux.Runtimes.Execution.Nodes.FrooxEngine.Avatar.Anchors.IsAnchorOccupied",
   isGeneric: false,
   inputs: [RESONITE_TYPE.AvatarAnchor],
-  outputs: [RESONITE_TYPE.Boolean],
+  outputs: [RESONITE_TYPE.Bool],
 };
 
 const IsUserAnchored: ResoniteNode = {
@@ -54,7 +54,7 @@ const IsUserAnchored: ResoniteNode = {
   type: "[ProtoFluxBindings]FrooxEngine.ProtoFlux.Runtimes.Execution.Nodes.FrooxEngine.Avatar.Anchors.IsUserAnchored",
   isGeneric: false,
   inputs: [RESONITE_TYPE.User],
-  outputs: [RESONITE_TYPE.Boolean],
+  outputs: [RESONITE_TYPE.Bool],
 };
 
 const ReleaseUser: ResoniteNode = {

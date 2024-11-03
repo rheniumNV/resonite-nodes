@@ -1,6 +1,6 @@
 import express, { RequestHandler } from "express";
-import { config } from "./config";
-import { getTypeConfig } from "./helper";
+import { config } from "./config.mjs";
+import { getTypeConfig } from "./helper.mjs";
 import json2emap from "json2emap";
 
 const insuring =
@@ -16,7 +16,7 @@ app.get(
   "/ping",
   insuring(async (_req, res) => {
     res.send("pong");
-  })
+  }),
 );
 
 app.get(
@@ -34,7 +34,7 @@ app.get(
       res
         .status(400)
         .send(
-          "Invalid query parameters: 'side' must be either 'input' or 'output'."
+          "Invalid query parameters: 'side' must be either 'input' or 'output'.",
         );
       return;
     }
@@ -44,15 +44,15 @@ app.get(
       res
         .status(400)
         .send(
-          `Invalid query parameters: 'hoveringType' ${hoveringType} is not a valid type.`
+          `Invalid query parameters: 'hoveringType' ${hoveringType} is not a valid type.`,
         );
       return;
     }
 
-    const result = { nodes: typeConfig[side] };
+    const result = typeConfig[side];
 
     res.send(format == "emap" ? json2emap(result) : result);
-  })
+  }),
 );
 
 app.listen(config.PORT, () => {

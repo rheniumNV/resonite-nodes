@@ -2,8 +2,8 @@ import {
   packResoniteNodeCategory,
   RESONITE_TYPE,
   ResoniteNode,
-} from "../../type";
-import { Channels } from "./channels";
+} from "../../type.mjs";
+import { Channels } from "./channels/index.mjs";
 
 const ApplyHDRGammaColorX: ResoniteNode = {
   label: "ApplyHDRGammaColorX",
