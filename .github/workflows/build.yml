@@ -33,7 +33,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/server:${{ env.TIMESTAMP }}
-            ghcr.io/${{ github.repository }}/server:latest
-          cache-from: type=registry,ref=ghcr.io/${{ github.repository }}/server:buildcache
-          cache-to: type=registry,ref=ghcr.io/${{ github.repository }}/server:buildcache,mode=max
+            ghcr.io/rhenium_nv/resonite-nodes/server:${{ env.TIMESTAMP }}
+            ghcr.io/rhenium_nv/resonite-nodes/server:latest
+          cache-from: type=registry,ref=ghcr.io/rhenium_nv/resonite-nodes/server:buildcache
+          cache-to: type=registry,ref=ghcr.io/rhenium_nv/resonite-nodes/server:buildcache,mode=max
