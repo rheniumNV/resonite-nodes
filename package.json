@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "start": "node dist/server.mjs",
-    "dev": "tsc-watch --onSuccess \"node dist/server.js\"",
+    "dev": "tsc-watch --onSuccess \"node dist/server.mjs\"",
     "clean": "node -e \"try { require('fs').rmdirSync('dist', { recursive: true }) } catch (e) {}\"",
     "build": "tsc",
     "lint": "eslint ./src/**/*.mts --flag unstable_ts_config",
