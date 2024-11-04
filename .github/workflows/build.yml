@@ -33,7 +33,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/rhenium_nv/resonite-nodes/server:${{ env.TIMESTAMP }}
-            ghcr.io/rhenium_nv/resonite-nodes/server:latest
-          cache-from: type=registry,ref=ghcr.io/rhenium_nv/resonite-nodes/server:buildcache
-          cache-to: type=registry,ref=ghcr.io/rhenium_nv/resonite-nodes/server:buildcache,mode=max
+            ghcr.io/rheniumnv/resonite-nodes/server:${{ env.TIMESTAMP }}
+            ghcr.io/rheniumnv/resonite-nodes/server:latest
+          cache-from: type=registry,ref=ghcr.io/rheniumnv/resonite-nodes/server:buildcache
+          cache-to: type=registry,ref=ghcr.io/rheniumnv/resonite-nodes/server:buildcache,mode=max
