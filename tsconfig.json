@@ -8,6 +8,9 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
+    "isolatedModules": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
     "moduleResolution": "Node16",
     "esModuleInterop": true,
     "skipLibCheck": true

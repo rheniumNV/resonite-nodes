@@ -29,6 +29,8 @@ jobs:
 
       - name: Build and push server image
         uses: docker/build-push-action@v5
+        env:
+          TIMESTAMP: ${{ env.TIMESTAMP }}
         with:
           context: .
           push: true

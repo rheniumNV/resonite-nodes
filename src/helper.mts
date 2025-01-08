@@ -140,6 +140,6 @@ const typeMap = targetTypes.reduce((acc, type) => {
   return acc;
 }, {} as TypeConfig);
 
-export const getTypeConfig = (type: string): TypeConfig[string] => {
+export const getTypeConfig = (type: string): TypeConfig[string] | undefined => {
   return typeMap[type];
 };
